@@ -9,6 +9,8 @@
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<LINK href="../CSS/STYLE.CSS" type="text/css" rel="stylesheet">
 		<script language="JavaScript" src="../JavaScript/Common.js"></script>
+         <script type="text/javascript" src="../JavaScript/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="../JavaScript/My97DatePicker/WdatePicker.js"></script>
 		<!-- -->
 	</HEAD>
 	<body leftMargin="0" topMargin="0" rightMargin="0">
@@ -62,9 +64,9 @@
 										</TR>
 										<TR>
 											<td style="WIDTH: 67px" align="right">开始时间：</td>
-											<td width="198"><FONT face="宋体"><asp:textbox id="txtStartTime" runat="server" CssClass="text" Width="139px" MaxLength="50" onclick="jcomSelectDateTime('txtStartTime',0);"></asp:textbox><A onclick="jcomSelectDateTime('txtStartTime',0);" href="#"><IMG height="18" alt="选择" src="../images/Calendar.gif" width="22" border="0"></A></FONT></td>
+											<td width="198"><FONT face="宋体"><asp:textbox id="txtStartTime" runat="server" CssClass="Wdate" Width="145px" MaxLength="50"  onFocus="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm:ss'})"></asp:textbox></FONT></td>
 											<td align="right" width="62">结束时间：</td>
-											<td width="223"><asp:textbox id="txtEndTime" runat="server" CssClass="text" Width="139px" MaxLength="50" onclick="jcomSelectDateTime('txtEndTime',0);"></asp:textbox><A onclick="jcomSelectDateTime('txtEndTime',0);" href="#"><IMG height="18" alt="选择" src="../images/Calendar.gif" width="22" border="0"></A></td>
+											<td width="223"><asp:textbox id="txtEndTime" runat="server" CssClass="Wdate" Width="145px" MaxLength="50"  onFocus="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm:ss'})"></asp:textbox></td>
 										</TR>
 										<TR>
 											<TD style="WIDTH: 67px; HEIGHT: 15px" align="right">试卷总分：</TD>

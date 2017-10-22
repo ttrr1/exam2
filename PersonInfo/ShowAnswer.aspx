@@ -43,7 +43,18 @@
 									<asp:RadioButton id="RadioButAll" runat="server" Text="全部显示" GroupName="ShowTest" Checked="True"
 										AutoPostBack="True" oncheckedchanged="RadioButAll_CheckedChanged"></asp:RadioButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:RadioButton id="RadioButWrong" runat="server" Text="错题显示" GroupName="ShowTest" AutoPostBack="True" oncheckedchanged="RadioButWrong_CheckedChanged"></asp:RadioButton></td>
-								<td vAlign="bottom" align="right" width="20%"><INPUT class="lenButton" onclick="jscomExportTableToWord('tblPaper')" type="button" value="导出到Word">&nbsp;&nbsp;<INPUT class="button" onclick="window.print();" type="button" value="打 印"></td>
+								<td vAlign="bottom" align="right" width="20%">
+                                
+                                <%
+                                    string loginID = Session["LoginID"].ToString().Trim();
+                                    if (loginID.Equals( "Admin"))
+                                    { %>
+                                <INPUT class="lenButton" onclick="jscomExportTableToWord('tblPaper')" type="button" value="导出到Word">&nbsp;&nbsp;<INPUT class="button" onclick="window.print();" type="button" value="打 印">
+
+                                     <% }
+                                     %>
+                                
+                                </td>
 							</tr>
 						</table>
 					</td>
