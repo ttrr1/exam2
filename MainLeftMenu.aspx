@@ -16,7 +16,7 @@
 	</style>
 		<script language="JavaScript" src="JavaScript/MouseEvent.js"></script>
 	</HEAD>
-	<body onselectstart="return false" bottomMargin="0" bgColor="#215dc6" leftMargin="0" topMargin="0"
+	<body onselectstart="return false" bottomMargin="0" bgColor="#215dc6" leftMargin="0"  topMargin="0"
 		rightMargin="0">
 		<script language="javascript">
 			function switchSysBar()
